@@ -109,7 +109,7 @@ body{
     width: 100%;
   }
 
-  .content{
+  .content,.container{
     margin-left:10%;
     margin-right:10%;
     margin-top:50px;
@@ -139,12 +139,36 @@ body{
     -webkit-text-fill-color: transparent !important;
   }
 
+  .treehacks{
+    background: -webkit-linear-gradient(left, #b8f8d0 20%, #16766a 70%) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+  }
+
+  .research{
+    background: -webkit-linear-gradient(left, #b20838 0%,#ca4d70 70%) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+  }
+
   .c{
     color:rgb(202, 188, 241);
   }
 
   .b{
     color:#a2c3ff;
+  }
+
+  .g{
+    color: #6bb665;
+  }
+
+  .teal{
+    color: #e8fef3;
+  }
+  
+  .r{
+    color: #db2055;
   }
 
   .link{

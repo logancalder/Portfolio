@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="with=device-width, initial-scale=1.0">
+    <title>LC - Treehacks 2023</title>
+    <link rel="stylesheet" href="style-project-page.css">
+    <script src="https://kit.fontawesome.com/92c2b5b560.js" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/x-icon" href="../../images/lc.png">
+</head>
+
+<script>
+        document.addEventListener('scroll', () => {
+            const header = document.querySelector('.nav-bar');
+            const content = document.querySelector('.content');
+            const projects = document.querySelector('.projects');
+
+            let num = window.scrollY / window.innerHeight;
+            if(num > 0){
+                header.classList.add('scrolled');
+                content.classList.add('scrolled');
+                projects.classList.add('scrolled');
+            }else{
+                header.classList.remove('scrolled');
+                content.classList.remove('scrolled');
+                projects.classList.remove('scrolled');
+            }
+            });
+        function select(category) {
+            var all = document.getElementsByClassName('project');
+            var personal = document.getElementsByClassName('personal');
+            var work = document.getElementsByClassName('work');
+            
+            if (category == "all") {
+                for (var i = 0; i < all.length; i++) {
+                    all[i].style.display = "block";
+                }
+            } else if (category == "work") {
+                for (var i = 0; i < personal.length; i++) {
+                    personal[i].style.display = "none";
+                }
+                for (var i = 0; i < work.length; i++) {
+                    work[i].style.display = "block";
+                }
+            } else {
+                for (var i = 0; i < personal.length; i++) {
+                    personal[i].style.display = "block";
+                }
+                for (var i = 0; i < work.length; i++) {
+                    work[i].style.display = "none";
+                }
+            }
+        };
+</script>
+
+<input type="file" id="fileInput" style="display: none;">
+
+<!-- make fireflies for hannah to play with :") -->
+
+<body>
+    <div class ="nav-bar">
+        <img class="logo" src="../../images/lc.png" alt="logo">
+        <nav class="nav">
+            <ul>
+                <li class="nav-button"><a href="../home.html">Home</a></li>
+                <li class="nav-button"><a href="../about.html">About</a></li>
+                <li class="nav-button"><a href="../projects.html" id = "selected">Projects</a></li>
+                <li class="lang-button"><a href="../../es/home.html">Español</a></li>
+            </ul>
+        </nav>
+    </div>
+    
+    <div class = "header">
+        <img src="../../images/projects/banners/treehacksbanner.jpg" id="header">
+    </div>
+
+    <div class = "content">
+        <h2 class = "treehacks">I was a nominee a Repl.it's award at Stanford's 2023 Treehacks Hackathon!</h2>
+        <p>In <span class="teal">February of 2023</span>, I was invited to compete at <span class="teal">Treehacks</span>, <span class="teal">Stanford</span>'s annual Hackathon. Along with a team of <span class="teal">3 others</span>, with two of us attending our first Hackathon, we created a <span class="teal">smart AI shopping assistant</span> utilizing <span class="teal">OpenAI</span>'s JavaScript API.</p>
+        <p>My contribution to the project was a <span class="teal">user-friendly UI</span> which the user could converse with the bot. I also created a sales presentation which we used to pitch our product to judges, includes representatives from <span class="teal">OpenAI</span>, <span class="teal">Google</span>, and <span class="teal">Repl.it</span>. My work was entirely <span class="teal">frontend</span>, being a <span class="teal">user-friendly chatbox</span> to give OpenAI's API prompts and recieve responses.
+            The purpose of this work was to make asking questions as <span class="teal">simple and straight-forward</span> as possible for the customer.
+        </p>
+        <p>My work features a <span class="teal">button</span> that appears in the bottom right of the client's screen. When clicked on, a <span class="teal">retractable chatbox</span> expands to fill 
+            the right half of the screen. Here, the user may ask <span class="teal">any question</span> regarding a product on the website.
+        Any question that is "undefined" or an empty string will not cause the AI to respond. Only when a <span class="teal">valid input</span> is provided, the AI will respond,
+            creating a <span class="teal">new reponse textbox</span> with a respective profile picture. Messages may be sent with the <span class="teal">send button</span>, and the chatbox may be closed with the <span class="teal">close button</span>.</p>
+        <p>Prior to the event, I had <span class="teal">no team or knowledge</span> of what a <span class="teal">Hackathon</span> would be like. I was very <span class="teal">excited</span>, but admittedly nervous. Around two weeks before the start date, I began reaching out to fellow hackers. Together, we managed to form a <span class="teal">team of 4</span> from across
+            the country, with none of us having met before. It also happened to be one of my <span class="teal">fellow teammates first Hackathon</span> as well!
+        <p>
+        <p>We went through many ideas and subjects of which to code, but finally settled on a <span class="teal">Smart AI</span> that could effectively <span class="teal">eliminate the need
+            for customer support</span>. The program would utilize <span class="teal">OpenAI's API</span>, and would have its own website to demonstrate both the <span class="teal">administrative and customer experience</span>.
+        <p>
+        <p>With Treehacks being <span class="teal">36 hours</span>, we set to work right away. One of my teammates, <span class="teal">Adi</span>, focused on the <span class="teal">backend features</span> and figured out how to
+            train OpenAI's API with custom data. He then focused on how to <span class="teal">permit the AI to provide for that data</span>. My other two teammates, <span class="teal">Alyssa</span> and <span class="teal">Sabrina</span>, focused on creating the <span class="teal">frontend homepage</span> of the website, with a <span class="teal">navigation bar</span> and <span class="teal">displayable
+            product lists</span>.<p>
+        <p>As I mentioned earlier, I focused on creating the <span class="teal">actual interface</span> that the user could <span class="teal">discuss with the bot inside of</span>. Fortunately, after over 20 hours of straight coding---and much testing---our <span class="teal">program came to life</span> after linking our code.
+        <p>We were even <span class="teal">nominated for Repl'it's award</span> of the best usage of their platform, but unfortuntately did not win. Better luck next time ;)</p>
+    </div>
+
+    <div class = "gallery">
+        <div class = "container">
+            
+            <div class = "photo">
+                <img src="../../images/projects/treehacks/button.jpg" id="post-img">
+            </div>
+            
+            <div class = "photo">
+                <img src="../../images/projects/treehacks/question.jpg" id="post-img">
+            </div>
+
+            <div class = "photo">
+                <img src="../../images/projects/treehacks/response.jpg" id="post-img">
+            </div>
+
+            <div class = "photo">
+                <img src="../../images/projects/treehacks/sunrise.png" id="post-img">
+            </div>
+
+            <div class = "photo">
+                <img src="../../images/projects/treehacks/lecture.png" id="post-img">
+            </div>
+
+            <div class = "photo">
+                <img src="../../images/projects/treehacks/sleep.jpg" id="post-img">
+            </div>
+        </div>
+    </div>
+
+    
+    <div class = "footer">
+        Made with <span style = "color: white;font-weight: bold;">♥</span> by Logan C
+    </div>
+</body>
+</html>
