@@ -88,7 +88,6 @@ body{
     width:80%;
     height: auto;
     transition: filter .1s ease-in-out;
-    cursor: pointer;
     filter: brightness(85%)
 }
 
@@ -128,8 +127,24 @@ body{
     -webkit-text-fill-color: transparent;
   }
 
+  .cream{
+    background: -webkit-linear-gradient(left, #a2c3ff 20%, rgb(245, 244, 178) 70%) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+  }
+
+  .hpe{
+    background: -webkit-linear-gradient(left, #28c966 20%, rgb(147, 171, 238) 70%) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+  }
+
   .c{
     color:rgb(202, 188, 241);
+  }
+
+  .b{
+    color:#a2c3ff;
   }
 
   .link{
@@ -141,3 +156,21 @@ body{
   .link:hover{
     color:rgb(255, 156, 217);
   }
+
+
+.container{
+    justify-content: center;
+    display:flex;
+    max-width: 100%;
+    flex-wrap: wrap;
+}
+
+.gallery div{
+    padding: 0 20px 50px 20px;
+}
+
+.gallery img{
+    width:275px;
+    border-radius: 15px;
+    transition: filter .1s ease-in-out;
+}
