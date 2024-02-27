@@ -315,6 +315,10 @@ form textarea, form input{
     font-weight: normal;
 }
 
+form input,form textarea{
+    margin-top:10px;
+}
+
 form label{
     font-weight: bold;
 }

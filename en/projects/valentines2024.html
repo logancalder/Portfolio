@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="with=device-width, initial-scale=1.0">
+    <title>Logan Calder</title>
+    <link rel="stylesheet" href="style-project-page.css">
+    <script src="https://kit.fontawesome.com/92c2b5b560.js" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/x-icon" href="../../images/lc.png">
+</head>
+
+<script>
+        document.addEventListener('scroll', () => {
+            const header = document.querySelector('.nav-bar');
+            const content = document.querySelector('.content');
+            const projects = document.querySelector('.projects');
+
+            let num = window.scrollY / window.innerHeight;
+            if(num > 0){
+                header.classList.add('scrolled');
+                content.classList.add('scrolled');
+                projects.classList.add('scrolled');
+            }else{
+                header.classList.remove('scrolled');
+                content.classList.remove('scrolled');
+                projects.classList.remove('scrolled');
+            }
+            });
+        function select(category) {
+            var all = document.getElementsByClassName('project');
+            var personal = document.getElementsByClassName('personal');
+            var work = document.getElementsByClassName('work');
+            
+            if (category == "all") {
+                for (var i = 0; i < all.length; i++) {
+                    all[i].style.display = "block";
+                }
+            } else if (category == "work") {
+                for (var i = 0; i < personal.length; i++) {
+                    personal[i].style.display = "none";
+                }
+                for (var i = 0; i < work.length; i++) {
+                    work[i].style.display = "block";
+                }
+            } else {
+                for (var i = 0; i < personal.length; i++) {
+                    personal[i].style.display = "block";
+                }
+                for (var i = 0; i < work.length; i++) {
+                    work[i].style.display = "none";
+                }
+            }
+        };
+</script>
+
+<input type="file" id="fileInput" style="display: none;">
+
+<!-- make fireflies for hannah to play with :") -->
+
+<body>
+    <div class ="nav-bar">
+        <img class="logo" src="../../images/lc.png" alt="logo">
+        <nav class="nav">
+            <ul>
+                <li class="nav-button"><a href="../home.html">Home</a></li>
+                <li class="nav-button"><a href="../about.html">About</a></li>
+                <li class="nav-button"><a href="../projects.html" id = "selected">Projects</a></li>
+                <li class="lang-button"><a href="../../es/home.html">Español</a></li>
+            </ul>
+        </nav>
+    </div>
+    
+    <div class = "header">
+        <img src="../../images/projects/valentinesbanner.jpg" id="header">
+        <div class = "text">Valentines 2024 Questionare</div>
+    </div>
+
+    <div class = "content">
+        <h2>This project was my fun little way of asking my girlfriend to be my Valentine this year.</h2>
+        <p>I had seen many different posts of people asking their significant others to be their Valentines, either through a card or flowers, but I wanted to do something different. <span class = "c">Something <i>original</i></span>. And so, I decided to develop an interactive website that would infintely ask her as such until she says yes (because she can't say no)!</p>
+        <p>The website consists of an <span class = "c">animated beating heart</span>, faded <span class = "c">text animations</span>, and multiple <span class = "c">text prompts </span>that change on each button click. The prompts will infintely cycle until the "yes" button is clicked, then revealing a celebratory screen with a cute GIF.</p>
+        <p>This project required me to obtain a much stronger grasp on <span class = "c">JavaScript</span> than I already had, and I also decided to write neat and tidy <span class = "c">HTML & CSS</span> (no spagetti code here). I am quite happy with how it turned out, as I created the project entirely on my own, and from this project developed a <span class = "c">newfound passion</span> for frontend development and UI/UX design.</p>
+        <br>
+        <p style = "color:white; font-weight: bold;">If you'd like to view the project yourself, I have uploaded the code to a GitHub repository linked <a class = "link" href = "https://github.com/logancalder/Valentines2024" target = "_blank">here</a>.</p>
+        <br>
+        <p><i>By the way, she said yes on the first go without pressing the "no" button ;)</i></p>
+    </div>
+
+    
+    <div class = "footer">
+        Made with <span style = "color: white;font-weight: bold;">♥</span> by Logan C
+    </div>
+</body>
+</html>

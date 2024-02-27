@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="with=device-width, initial-scale=1.0">
+    <title>Logan Calder</title>
+    <link rel="stylesheet" href="../style-projects.css">
+    <script src="https://kit.fontawesome.com/92c2b5b560.js" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/x-icon" href="../images/lc.png">
+</head>
+
+<script>
+        document.addEventListener('scroll', () => {
+            const header = document.querySelector('.nav-bar');
+            const content = document.querySelector('.content');
+            const projects = document.querySelector('.projects');
+
+            let num = window.scrollY / window.innerHeight;
+            if(num > 0){
+                header.classList.add('scrolled');
+                content.classList.add('scrolled');
+                projects.classList.add('scrolled');
+            }else{
+                header.classList.remove('scrolled');
+                content.classList.remove('scrolled');
+                projects.classList.remove('scrolled');
+            }
+            });
+        function select(category) {
+            var all = document.getElementsByClassName('project');
+            var personal = document.getElementsByClassName('personal');
+            var work = document.getElementsByClassName('work');
+            
+            if (category == "all") {
+                for (var i = 0; i < all.length; i++) {
+                    all[i].style.display = "block";
+                }
+            } else if (category == "work") {
+                for (var i = 0; i < personal.length; i++) {
+                    personal[i].style.display = "none";
+                }
+                for (var i = 0; i < work.length; i++) {
+                    work[i].style.display = "block";
+                }
+            } else {
+                for (var i = 0; i < personal.length; i++) {
+                    personal[i].style.display = "block";
+                }
+                for (var i = 0; i < work.length; i++) {
+                    work[i].style.display = "none";
+                }
+            }
+        };
+</script>
+
+<input type="file" id="fileInput" style="display: none;">
+
+<!-- make fireflies for hannah to play with :") -->
+
+<body>
+    <div class ="nav-bar">
+        <img class="logo" src="../images/lc.png" alt="logo">
+        <nav class="nav">
+            <ul>
+                <li class="nav-button"><a href="home.html">Home</a></li>
+                <li class="nav-button"><a href="about.html">About</a></li>
+                <li class="nav-button"><a href="#" id = "selected">Projects</a></li>
+                <li class="lang-button"><a href="../es/home.html">Español</a></li>
+            </ul>
+        </nav>
+    </div>
+    
+    <div class = "projects">
+        <h2>My Projects & Experience</h2>
+        <div class = "buttons">
+            <button id = "colored-button" onclick = "select('all')">All</button>
+            <button id = "transparent-button" onclick = "select('personal')">Personal</button>
+            <button id = "transparent-button" onclick = "select('work')">Work & School</button>
+        </div>
+        
+        <div class = "container">
+            <div class = "project personal">
+                <a href = "projects/valentines2024.html"><img src="../images/projects/valentines2024.jpg" id="post-img"></a>
+                <h3 id = "post-title">Valentines 2024 Questionare</h3>
+                <span id = "post-date">Feburary 10, 2024 <span style = "font-size:x-small;">•</span> HTML, JS</span>
+            </div>
+
+            <div class = "project work">
+                <img src="../images/projects/cmtm.jpg" id="post-img">
+                <h3 id = "post-title">Christian Ministry Website</h3>
+                <span id = "post-date">Feburary 1, 2024 <span style = "font-size:x-small;">•</span> HTML, JS</span>
+            </div>
+
+            <div class = "project work">
+                <img src="../images/projects/hpe.jpg" id="post-img">
+                <h3 id = "post-title">Hewlett Packard Enterprise</h3>
+                <span id = "post-date">Jun-Oct, 2023 <span style = "font-size:x-small;">•</span> Py, Go, HTML, JS</span>
+            </div>
+
+            <div class = "project personal">
+                <img src="../images/projects/valentines2024.jpg" id="post-img">
+                <h3 id = "post-title">Valentines 2024 Questionare</h3>
+                <span id = "post-date">Feburary 10, 2024 <span style = "font-size:x-small;">•</span> HTML, JS</span>
+            </div>
+
+            <div class = "project work">
+                <img src="../images/projects/cmtm.jpg" id="post-img">
+                <h3 id = "post-title">Christian Ministry Website</h3>
+                <span id = "post-date">Feburary 1, 2024 <span style = "font-size:x-small;">•</span> HTML, JS</span>
+            </div>
+
+            <div class = "project work">
+                <img src="../images/projects/hpe.jpg" id="post-img">
+                <h3 id = "post-title">Hewlett Packard Enterprise</h3>
+                <span id = "post-date">October 1, 2023 <span style = "font-size:x-small;">•</span> Py, Go, HTML, JS</span>
+            </div>
+        </div>
+    </div>
+
+    
+    <div class = "footer">
+        Made with <span style = "color: white;font-weight: bold;">♥</span> by Logan C
+    </div>
+</body>
+</html>
