@@ -105,7 +105,7 @@ p{
 
 .nav-button a:hover, .lang-button a:hover, .give-button a:hover{
     transition: all .3s ease 0s;
-    color:rgb(107, 182, 101);
+    color:#6bb665;
 }
 
 #selected{
