@@ -26,32 +26,6 @@
             projects.classList.remove('scrolled');
         }
         });
-
-    function toggleSelection(element) {
-        var content = document.getElementById('skills-content');
-        
-        var spans = document.getElementsByClassName('about-skill');
-        var spanContent = element.textContent;
-        content.style.opacity = 1;
-        if(spanContent == "Skills"){
-            content.textContent = "Python, C, C++, C#, Golang, Java, Javascript, HTML & CSS, K8, Docker";
-        } else if(spanContent == "Experience"){
-            content.textContent = "Software Engineering Intern @ HPE Stanford Treehacks 2023 Nominee \nResearch Assistant @ SCU";
-        } else{
-            content.textContent = "Santa Clara Unviersity, B.S. 2025\nComputer Science & Engineering";
-        }
-        
-        // Remove 'selected' class from all spans
-        for (var i = 0; i < spans.length; i++) {
-            spans[i].classList.remove('selected');
-        }
-        element.classList.add('selected');
-        };
-
-    function scrollToDiv() {
-        var div = document.getElementById('connect');
-        div.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    };
 </script>
 
 <input type="file" id="fileInput" style="display: none;">
@@ -66,6 +40,7 @@
                 <li class="nav-button"><a href="home.html">Home</a></li>
                 <li class="nav-button"><a href="#" id = "selected">About</a></li>
                 <li class="nav-button"><a href="projects.html">Projects</a></li>
+                <li class="nav-button"><a href="tutor.html">Tutor</a></li>
                 <li class="lang-button"><a href="../es/home.html">Español</a></li>
             </ul>
         </nav>
@@ -75,11 +50,13 @@
             <img src="../images/about.JPG" id="about">
             <div>
                 <h1 class = "title">A bit <span id = "gradient">about me</span>...</h1>
-                <h2>I'm Logan, a Computer Science student at Santa Clara University.</h2>
-                <p>I have been writing code for over <span id = "highlight">6 years</span>. Ever since I began developing my first applications, I fell in love with programming.</p>
-                <p>Growing up, I had a strong passion for creation. From LEGOs to Minecraft, I loved building and creating worlds of my own imagination. There was just <span id = "highlight">something so satisfying and rewarding about being able to construct anything</span> that my imagination desired.</p>
-                <p>Fast forward to now, and I still find myself holding that same passion for creation. Provided this, I've felt that Computer Science is the perfect discipline for me to reflect this creative liberty.</p>
-                <p>My passions lie within <span id = "highlight">medicine and UI design</span>. I would love to be a part of a development team that worked to create new medical technologies, or other interfaces that users may interact with.</p>
+                <div id = "bio">
+                    <h2>I'm Logan, a Computer Science student at Santa Clara University.</h2>
+                    <p>I have been writing code for over <span id = "highlight">6 years</span>. Ever since I began developing my first applications, I fell in love with programming.</p>
+                    <p>Growing up, I had a strong passion for creation. From LEGOs to Minecraft, I loved building and creating worlds of my own imagination. There was just <span id = "highlight">something so satisfying and rewarding about being able to construct anything</span> that my imagination desired.</p>
+                    <p>Fast forward to now, and I still find myself holding that same passion for creation. Provided this, I've felt that Computer Science is the perfect discipline for me to reflect this creative liberty.</p>
+                    <p>My passions lie within <span id = "highlight">medicine and UI design</span>. I would love to be a part of a development team that worked to create new medical technologies, or other interfaces that users may interact with.</p>
+                </div>
             </div>
         </div>
 

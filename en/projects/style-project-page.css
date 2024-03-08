@@ -167,8 +167,17 @@ body{
     color: #e8fef3;
   }
   
-  .r{
-    color: #db2055;
+  #r, .r{
+    color: #db2055; 
+  }
+
+  #r{
+    text-decoration: none;
+    animation: color .2s ease-in-out;
+  }
+  
+  #r:hover{
+    color: #df416e; 
   }
 
   .link{

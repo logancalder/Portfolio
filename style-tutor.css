@@ -9,7 +9,7 @@ body{
     
 }
 
-.content{
+.content,.connect{
     margin-left:10%;
     margin-right:10%;
     align-items:center;
@@ -19,7 +19,7 @@ body{
     align-items: flex-start;
 }
 
-#bio{
+#desc{
     opacity: 0;
     animation: fadeInAnimation ease 1.5s;
     animation-iteration-count: 1;
@@ -135,6 +135,96 @@ p{
 #selected{
     color:white;
     font-weight:600;
+}
+
+/* Connect Section */
+
+.connect{
+    margin-top:50px;
+    display:flex;
+    align-items: flex-start;
+}
+
+.connect-bio,.connect-form{
+    width:50%;
+}
+
+.connect-bio{
+    text-align:left;
+    max-width: 50%;
+}
+
+.connect-bio i{
+    font-size:45px;
+    margin-top:20px;
+    padding-right:15px;
+    cursor:pointer;
+    transition: color .1s ease-in-out;
+    color:white;
+}
+
+.connect-bio i:hover{
+    color:#6bb665;
+}
+
+.connect-bio h2{
+    margin: 0;
+}
+
+.connect-bio p{
+    color: rgb(207, 207, 207);
+    max-width: 85%;
+    line-height: 1.5;
+}
+
+form{
+    padding-left:20%;
+    max-width:80%
+}
+
+form textarea, form input{
+    padding-left:8px;
+    margin-top:5px;
+    width: 100%;
+    box-sizing: border-box;
+    background-color:#1d1c22;
+    border: 1px solid #7a758f;
+    border-radius: 7px;
+    height:30px;
+    color:white;
+    resize:none;
+    font-family: 'Inter', sans-serif;
+    font-weight: normal;
+}
+
+form input,form textarea{
+    margin-top:10px;
+}
+
+form label{
+    font-weight: bold;
+}
+
+#message{
+    padding-top:8px;
+    height: 60px;
+}
+
+input[type="submit"]{
+    background-color:#6bb665;
+    border: 1px solid #6bb665;
+    font-weight: bold;
+    cursor:pointer;
+    transition: background-color .1s ease-in-out, border .1s ease-in-out;
+}
+
+input[type="submit"]:hover{
+    background-color:#7ec579;
+    border: 1px solid #7ec579;
+}
+
+::placeholder{
+    color:#a9a5b8;
 }
 
 /* Footer */
