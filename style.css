@@ -142,7 +142,7 @@ body{
     text-decoration:none;
 }
 
-.nav-button a:hover, .lang-button a:hover, .give-button a:hover{
+.nav-button a:hover, .lang-button a:hover, .give-button a:hover, .hover-button:hover{
     transition: all .3s ease 0s;
     color:rgb(107, 182, 101);
 }

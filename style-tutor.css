@@ -14,6 +14,7 @@ body{
     margin-right:10%;
     align-items:center;
     margin-top:100px;
+    padding-bottom:50px;
     padding-top:100px;
     display:flex;
     align-items: flex-start;
@@ -51,8 +52,11 @@ body{
 .title{
     font-size:60px;
     margin-top:0;
-    border-bottom: 1.5px solid #2d2d2d;
     padding-bottom: 25px;
+}
+
+.title, .content{
+    border-bottom: 1.5px solid #2d2d2d;
 }
 
 h2{
@@ -66,7 +70,7 @@ p{
     max-width: 100%;
 }
 
-#gradient{
+#gradient,#click-button{
     background: -webkit-linear-gradient(left, rgb(133, 196, 255) 20%, rgb(107, 182, 101) 70%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -127,9 +131,15 @@ p{
     text-decoration:none;
 }
 
-.nav-button a:hover, .lang-button a:hover, .give-button a:hover{
+.nav-button a:hover, .lang-button a:hover, .give-button a:hover .hover-button:hover{
     transition: all .3s ease 0s;
     color:#6bb665;
+}
+
+.hover-button{
+    font-weight: bold;
+    cursor: pointer;
+    color:white;
 }
 
 #selected{
@@ -140,7 +150,7 @@ p{
 /* Connect Section */
 
 .connect{
-    margin-top:50px;
+    margin-top:0;
     display:flex;
     align-items: flex-start;
 }
@@ -234,4 +244,48 @@ input[type="submit"]:hover{
     text-align:center;
     margin-top:100px;
     margin-bottom:25px;
+}
+
+
+#click-button{
+    cursor:pointer;
+    font-weight: bold;
+}.nav-button a:hover, .lang-button a:hover, .give-button a:hover, .hover-button:hover{
+    transition: all .3s ease 0s;
+    color:rgb(107, 182, 101);
+}
+
+#colored-button,#transparent-button{
+    font-family: 'Inter', sans-serif;
+    font-size:large;
+    font-weight: 700;
+    cursor: pointer;
+    padding: 10px 30px;
+    border-radius: 20px;
+    margin-top:10px;
+}
+
+#colored-button:hover,#transparent-button:hover,#colored-button{
+    color:#121212;
+    border: none;
+}
+
+#colored-button{
+    background-image: linear-gradient(to left, rgb(133, 196, 255), rgb(107, 182, 101));
+}
+
+#colored-button:hover,#transparent-button:hover{
+    background: white;
+    transition: background-image .4s,background-color .4s;
+}
+
+#transparent-button{
+    margin-left:2%;
+    color:white;
+    border: 1.6px solid white;
+    background: #121212;
+}
+
+#transparent-button:hover{
+    border: 1.6px solid white; /* This provides animation */
 }

@@ -9,6 +9,8 @@
     <link rel="icon" type="image/x-icon" href="../images/lc.png">
 </head>
 
+<!-- Other scripts -->
+
 <script>
     document.addEventListener('scroll', () => {
         const header = document.querySelector('.nav-bar');
@@ -50,7 +52,7 @@
 
     function scrollToDiv() {
         var div = document.getElementById('connect');
-        div.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        div.scrollIntoView({ behavior: 'smooth', block: 'center' });
     };
 </script>
 
@@ -90,9 +92,9 @@
         <p>I am an aspiring Software Developer with interests in medical technologies, software, and optimization. My strengths lie in quick-learning capabilities and a driven mindset. <br><br>I have worked as a Software Engineering intern at Hewlett Packard Enterprise for two years, working on fullstack developer tools for network connections. My work has been utilized by over 100 developers, quality assurance and sales engineers, and customer service representatives.
         <br><br>I also enjoy teaching and am an active tutor in the subjects of Spanish, Python, and Algebra through Calculus I.</p>
         <br>
-        <span class = "about-skill" onclick="toggleSelection(this)">Skills</span>
-        <span class = "about-skill" onclick="toggleSelection(this)">Education</span>
-        <span class = "about-skill" onclick="toggleSelection(this)">Experience</span>
+        <span class = "about-skill hover-button" onclick="toggleSelection(this)">Skills</span>
+        <span class = "about-skill hover-button" onclick="toggleSelection(this)">Education</span>
+        <span class = "about-skill hover-button" onclick="toggleSelection(this)">Experience</span>
         <div id = "skills-content">Python, C, C++, C#, Golang, Java, Javascript, HTML & CSS, K8, Docker</div> <!-- This becomes the skills list per category -->
     </div>
 
@@ -127,17 +129,19 @@
             <a href = "https://github.com/logancalder" target = "_blank"><i class="fa-brands fa-github fa-2xl"></i></a><a href = "https://www.linkedin.com/in/logancalder/" target = "_blank"><i class="fa-brands fa-linkedin fa-2xl"></i></a>
         </div>
         <div class = "connect-form">
-            <form action="/submit_form" method="post">
+            <form action="https://api.web3forms.com/submit" method="POST">
+                <input type="hidden" name="access_key" value="d8031e4e-c63c-4fbd-a229-c9d3c8ba641e">
                 <label for="name">Name:</label><br>
-                <input type="name" name="email" placeholder = "Introduce yourself!" required><br><br>
+                <input type="name" name="name" id = "names" placeholder = "Introduce yourself!" required><br><br>
             
                 <label for="email">Email:</label><br>
-                <input type="email" name="email" placeholder = "address@domain.com" required><br><br>
+                <input type="email" name="email" id = "email" placeholder = "address@domain.com" required><br><br>
             
                 <label for="message">Message:</label><br>
-                <textarea id="message" name="message" placeholder="Why do you want to get connected?" required></textarea><br><br>
-            
-                <input type="submit" value="Submit">
+                <textarea id="message" name="message" id = "message" placeholder="Why do you want to get connected?" required></textarea><br><br>
+                
+                <input type="submit" value="Send">
+
             </form>
         </div>
     </div>
