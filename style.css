@@ -43,12 +43,15 @@ body{
     margin-top:20px;
 }
 
-#img {
+#img{
     margin-top:75px;
     border-radius: 50%;
     max-width: 30%;
     box-shadow: 0 0 50px 20px rgba(0, 0, 0, 0.3);
-    float: right;
+}
+
+#img_mobile{
+    display:none;
 }
 
 #name{
@@ -258,7 +261,7 @@ body{
 /* Connect Section */
 
 .connect{
-    margin-top:175px;
+    margin-top:100px;
     display:flex;
     align-items: flex-start;
 }
@@ -352,4 +355,406 @@ input[type="submit"]:hover{
     text-align:center;
     margin-top:100px;
     margin-bottom:25px;
+}
+
+
+@media only screen and (max-width: 481px){
+    /* Global */
+
+    body{
+        margin:auto;
+        background-color:#121212;
+        font-family: 'Inter', sans-serif;
+        text-align:left;
+        color:white;
+        
+    }
+
+    /* Header and about me formatting */
+
+    .header,.content,.projects,.connect{
+        margin-left:10%;
+        margin-right:10%;
+        align-items:center;
+        margin-top:100px;
+    }
+    
+    .projects, .content{
+        border-bottom: 1.5px solid #2d2d2d;
+    }
+
+    /* Header formatting */
+
+    .header{
+        display:flex;
+    }
+
+    .intro{
+        margin-top:75px;
+        font-size:55px;
+        font-weight:bold;
+    }
+
+    .bio{
+        font-size:24px;
+        margin-top:30px;
+        color: rgb(207, 207, 207);
+        font-weight: 400;
+        max-width: 100%;
+        line-height: 1.5;
+    }  
+
+    .buttons{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top:10px;
+    }
+
+    #img_mobile{
+        display:flex;
+        margin:auto;
+        margin-top:75px;
+        border-radius: 50%;
+        max-width: 70%;
+        box-shadow: 0 0 50px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    #img{
+        display:none;
+    }
+
+    #name{
+        background: -webkit-linear-gradient(left, rgb(133, 196, 255) 20%, rgb(107, 182, 101) 70%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    #colored-button,#transparent-button{
+        margin-top:25px;
+        margin-right:25px;
+        font-family: 'Inter', sans-serif;
+        font-size:large;
+        font-weight: 700;
+        cursor: pointer;
+        padding: 10px 30px;
+        border-radius: 20px;
+    }
+
+    #colored-button:hover,#transparent-button:hover,#colored-button{
+        color:#121212;
+        border: none;
+    }
+
+    #colored-button{
+        background-image: linear-gradient(to left, rgb(133, 196, 255), rgb(107, 182, 101));
+    }
+
+    #colored-button:hover,#transparent-button:hover{
+        background: white;
+        transition: background-image .4s,background-color .4s;
+    }
+
+    #transparent-button{
+        margin-left:0px;
+        color:white;
+        border: 1.6px solid white;
+        background: #121212;
+    }
+
+    #transparent-button:hover{
+        border: 1.6px solid white; /* This provides animation */
+    }
+
+    /* Nav bar */
+
+    .nav-bar{
+        padding-left:10%;
+        padding-right:10%;
+        margin-top:-50px;
+
+        z-index: 100;
+        position:fixed;
+        box-sizing: border-box;
+
+        width:100%;
+        display: flex;
+
+        letter-spacing:.05em;
+        justify-content: space-between;
+        align-items: center;
+
+        transition: background-color 0.1s ease-in-out;
+    }
+
+    .nav-bar.scrolled{
+        margin-top:-150px;
+        background-color: #121212;
+        box-shadow: 0 0 50px 20px 121212;
+        background: linear-gradient(180deg, #121212 60%, rgba(255,255,255,0)100%);
+        height:275px;
+        z-index: 99;
+    }
+
+    .logo{
+        cursor: pointer;
+        max-height:75px;
+    }
+
+    /* Nav bar */
+
+    .nav{
+        display:none;
+        list-style: none;
+    }
+
+    .nav li{
+        display: inline-block;
+        padding-left: 30px;
+    }
+
+    .nav li a{
+        color: rgb(207, 207, 207);
+        text-decoration:none;
+    }
+
+    .nav-button a:hover, .lang-button a:hover, .give-button a:hover, .hover-button:hover{
+        transition: all .3s ease 0s;
+        color:rgb(107, 182, 101);
+    }
+
+    #selected{
+        color:white;
+        font-weight:600;
+    }
+
+    /* About Section Formatting */
+
+    .content{
+        text-align:left;
+        margin-top:95px;
+        opacity:0;
+        border-right: none;
+        padding-right: 0;
+        padding-bottom: 7px;
+        transition: opacity 0.5s ease-in-out, margin-top 0.5s ease-in-out;
+    }
+
+    .content.scrolled, .projects.scrolled{
+        margin-top:75px;
+        opacity:1;
+    }
+
+    .content h1{
+        font-size:35px;
+        text-align: center;
+    }
+
+    .content p{
+        text-align: center;
+        font-size:20px;
+        color: rgb(207, 207, 207);
+        max-width: 100%;
+        line-height: 1.5;
+    }
+
+    .about-skill, .selected, #skills-content{
+        justify-content: center;
+        font-size: 19px;
+        color: #a1a1a1;
+        margin-right:10px;
+        font-weight:bold;
+        cursor: pointer;
+        border-bottom: 1.5px solid #121212;
+    }
+    #skills-content{
+        max-width: 100%;
+        margin: auto;
+        text-align: center;
+    }
+    #skill-buttons{
+        margin-bottom: 25px;
+        text-align: center;
+    }
+
+
+    .selected{
+        border-bottom: 1.5px solid #6bb665;
+        padding-bottom: 3px;
+        color:white;
+        transition: color .3s ease-in-out, border-bottom .3s ease-in-out;
+    }
+
+    #skills-content{
+        margin-top:10px;
+        font-weight:normal;
+        color: rgb(207, 207, 207);
+        transition: all .3s ease-in-out;
+        line-height: 1.5;
+        opacity:0;
+        padding-bottom: 50px;
+    }
+
+    /* Projects Section Formatting */
+
+    .projects{
+        padding-bottom:50px;
+        margin-top:0;
+        text-align:center;
+        opacity:0;
+        transition: opacity .3s ease-in-out;
+    }
+
+    .projects h2{
+        font-size:35px;
+        margin-bottom:25px;
+    }
+
+    .projects img{
+        margin-top: 25px;
+        max-width:100%;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        transition: filter .1s ease-in-out;
+        cursor: pointer;
+    }
+
+    .projects img:hover{
+        filter: brightness(50%);
+    }
+
+    .post{
+        max-width:95%;
+        text-align:center;
+        overflow:hidden;
+    }
+
+    #post-title{
+        font-size:25px;
+        margin-bottom: 10px;
+    }
+
+    #post-date{
+        font-size:18px;
+        color: rgb(207, 207, 207);
+        font-weight:300;
+    }
+
+    #post-desc{
+        font-size:20px;
+        margin-top:10px;
+        line-height: 1.5;
+    }
+
+    #middle{
+        margin:auto;
+    }
+
+    .gallery{
+        align-items:center;
+        display:flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    /* Connect Section */
+
+    .connect{
+        margin-top:50px;
+        display:inline-block;
+        align-items: center;
+    }
+
+    .connect h2{
+        font-size:35px;
+    }
+
+    .connect-bio,.connect-form{
+        width:100%;
+    }
+
+    .connect-bio{
+        font-size:20px;
+        text-align:center;
+        max-width: 100%;
+    }
+
+    .connect-bio i{
+        font-size:90px;
+        margin-top:50px;
+        margin-bottom:25px;
+        padding-right:15px;
+        cursor:pointer;
+        transition: color .1s ease-in-out;
+        color:white;
+    }
+
+    .connect-bio i:hover{
+        color:#6bb665;
+    }
+
+    .connect-bio p{
+        color: rgb(207, 207, 207);
+        max-width: 100%;
+        line-height: 1.5;
+    }
+
+    form{
+        padding:0;
+        margin:auto;
+        margin-top:50px;
+        max-width:100%
+    }
+
+    form textarea, form input{
+        margin-top:5px;
+        width: 100%;
+        box-sizing: border-box;
+        background-color:#1d1c22;
+        border: 1px solid #7a758f;
+        border-radius: 7px;
+        height:30px;
+        color:white;
+        resize:none;
+        font-family: 'Inter', sans-serif;
+        font-weight: normal;
+    }
+
+    form input,form textarea{
+        font-size:15px;
+        margin-top:10px;
+    }
+
+    form label{
+        font-size:20px;
+        font-weight: bold;
+    }
+
+    #message{
+        padding-top:8px;
+        height: 60px;
+    }
+
+    input[type="submit"]{
+        background-color:#6bb665;
+        border: 1px solid #6bb665;
+        font-weight: bold;
+        font-size:15px;
+        cursor:pointer;
+        transition: background-color .1s ease-in-out, border .1s ease-in-out;
+    }
+
+    ::placeholder{
+        color:#a9a5b8;
+    }
+
+    /* Footer */
+
+    .footer{
+        color:#a9a5b8;
+        text-align:center;
+        margin-top:50px;
+        margin-bottom:30px;
+    }
+
 }
