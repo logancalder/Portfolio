@@ -96,6 +96,18 @@ body{
 
 /* Nav bar */
 
+#nav-menu-button{
+    display:none;
+}
+
+#mobile-nav-bar{
+    display:none;
+}
+
+.nav-menu-container{
+    display:none;
+}
+
 .nav-bar{
     padding-left:10%;
     padding-right:10%;
@@ -466,14 +478,54 @@ input[type="submit"]:hover{
         border: 1.6px solid white; /* This provides animation */
     }
 
-    /* Nav bar */
+    .nav-menu-container{
+        display:block;
+    }
 
-    .nav-bar{
+    #nav-menu-button{
+        background: none;
+        display:block;
+        font-size: 25px;
+    }
+
+    #mobile-nav-bar.fade{
+        opacity:1 !important;
+    }
+
+    #mobile-nav-bar{
+        opacity:0;
+        transition: opacity .2s !important;
+
+        z-index:5;
+        position: relative;
+        background-color: #121212;
+        padding-bottom:100%;
+        background: linear-gradient(180deg, rgba(255,255,255,0)5.5%, #121212 5.5%);
+    }
+
+    #mobile-nav-bar ul{
+        margin:auto;
+        padding:0;
+        padding-top:40%;
+
+        list-style: none;
+        text-align: center;
+    }
+
+    #mobile-nav-bar a{
+        color:white;
+        font-weight: bold;
+
+        line-height: 2.2;
+        font-size:50px;
+        text-decoration: none;
+    }
+
+    #mobile-nav-bar{
         padding-left:10%;
         padding-right:10%;
         margin-top:-50px;
 
-        z-index: 100;
         position:fixed;
         box-sizing: border-box;
 
@@ -496,12 +548,11 @@ input[type="submit"]:hover{
         z-index: 99;
     }
 
-    .logo{
-        cursor: pointer;
-        max-height:75px;
-    }
-
     /* Nav bar */
+
+    .nav-bar{
+        z-index:10;
+    }
 
     .nav{
         display:none;
