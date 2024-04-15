@@ -372,6 +372,7 @@ input[type="submit"]:hover{
     }
     
     p{
+        font-size:20px;
         color:#cfcfcf;
         line-height: 1.5;
         max-width: 100%;

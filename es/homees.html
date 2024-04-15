@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="with=device-width, initial-scale=1.0">
+    <title>.home()</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://kit.fontawesome.com/92c2b5b560.js" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+</head>
+
+<script>
+    document.addEventListener('scroll', () => {
+        const header = document.querySelector('.nav-bar');
+
+        if (window.scrollY > 0) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+    })
+</script>
+
+<body>
+    <div class="nav-bar">
+        <img class="logo" src="../images/lc.png" alt="logo">
+        <nav class="nav">
+            <ul>
+                <li class="nav-button"><a href="#">Hogar</a></li>
+                <li class="nav-button"><a href="#">Sobre Mí</a></li>
+                <li class="nav-button"><a href="#">Proyectos</a></li>
+                <li class="lang-button"><a href="../en/home.html">English</a></li>
+            </ul>
+        </nav>
+    </div>
+        
+    <div class = "header">
+        <div class = "header-text">
+            <div class = "intro">Hola, soy<br><span id = "name">Logan Calder</span>.</div>
+            <div class = "bio">Soy un estudiante de ciencias de computación en la Universidad de Santa Clara con 2 años de experiencia en la industria.</div>
+            <div class = "buttons">
+                <button id = "colored-button">Contactar</button>
+                <button id = "transparent-button">Descargar CV</button>
+            </div>
+        </div>
+        <img src="../images/pfp.JPG" id="img">
+    </div>
+
+    <div class = "content">
+        <p>dasiudjhlskdjfh<br>dasiudjhlskdjfh<br>dasiudjhlskdjfh<br>dasiudjhlskdjfh<br>dasiudjhlskdjfh<br>dasiudjhlskdjfh<br>dasiudjhlskdjfh<br>dasiudjhlskdjfh<br>dasiudjhlskdjfh<br>dasiudjhlskdjfh<br>dasiudjhlskdjfh<br>dasiudjhlskdjfh<br>dasiudjhlskdjfh<br>dasiudjhlskdjfh<br></p>
+    </div>
+    
+    <!-- <button></button> -->
+</body>
+</html>

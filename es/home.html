@@ -2,53 +2,174 @@
 <html>
 <head>
     <meta name="viewport" content="with=device-width, initial-scale=1.0">
-    <title>.home()</title>
+    <title>Logan Calder</title>
     <link rel="stylesheet" href="../style.css">
     <script src="https://kit.fontawesome.com/92c2b5b560.js" crossorigin="anonymous"></script>
     <meta charset="UTF-8">
+    <link rel="icon" type="image/x-icon" href="../images/lc.png">
 </head>
+
+<!-- Other scripts -->
 
 <script>
     document.addEventListener('scroll', () => {
         const header = document.querySelector('.nav-bar');
+        const content = document.querySelector('.content');
+        const projects = document.querySelector('.projects');
 
-        if (window.scrollY > 0) {
+        let num = window.scrollY / window.innerHeight;
+        if(num > 0){
             header.classList.add('scrolled');
-        } else {
+            content.classList.add('scrolled');
+            projects.classList.add('scrolled');
+        }else{
             header.classList.remove('scrolled');
+            content.classList.remove('scrolled');
+            projects.classList.remove('scrolled');
         }
-    })
+        });
+
+    function toggleSelection(element) {
+        var content = document.getElementById('skills-content');
+        
+        var spans = document.getElementsByClassName('about-skill');
+        var spanContent = element.textContent;
+        content.style.opacity = 1;
+        if(spanContent == "Skills"){
+            content.textContent = "Python, C, C++, C#, Golang, Java, Javascript, HTML & CSS, K8, Docker";
+        } else if(spanContent == "Experience"){
+            content.textContent = "Software Engineering Intern @ HPE Stanford Treehacks 2023 Nominee \nResearch Assistant @ SCU";
+        } else{
+            content.textContent = "Santa Clara Unviersity, B.S. 2025\nComputer Science & Engineering";
+        }
+        
+        // Remove 'selected' class from all spans
+        for (var i = 0; i < spans.length; i++) {
+            spans[i].classList.remove('selected');
+        }
+        element.classList.add('selected');
+        };
+
+    function scrollToDiv() {
+        var div = document.getElementById('connect');
+        div.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    };
+
+    function toggleNavBar() {
+        var element = document.getElementById("mobile-nav-bar");
+        console.log(element);
+        element.classList.toggle("fade");
+    };
 </script>
+
+<input type="file" id="fileInput" style="display: none;">
+
+<!-- make fireflies for hannah to play with :") -->
 
 <body>
     <div class="nav-bar">
         <img class="logo" src="../images/lc.png" alt="logo">
         <nav class="nav">
             <ul>
-                <li class="nav-button"><a href="#">Hogar</a></li>
-                <li class="nav-button"><a href="#">Sobre Mí</a></li>
-                <li class="nav-button"><a href="#">Proyectos</a></li>
+                <li class="nav-button"><a href="#" id = "selected">Hogar</a></li>
+                <li class="nav-button"><a href="about.html">Sobre Mí</a></li>
+                <li class="nav-button"><a href="projects.html">Proyectos</a></li>
+                <li class="nav-button"><a href="tutor.html">Mentor</a></li>
                 <li class="lang-button"><a href="../en/home.html">English</a></li>
             </ul>
         </nav>
+        <div onclick = "toggleNavBar()" class = "nav-menu-container">
+            <i class="fa-solid fa-bars" id = "nav-menu-button"></i>
+        </div>
     </div>
         
+    <div id = "mobile-nav-bar">
+        <ul>
+            <li class="nav-button"><a href="#">Hogar</a></li>
+            <li class="nav-button"><a href="#">Sobre Mí</a></li>
+            <li class="nav-button"><a href="#">Proyectos</a></li>
+            <li class="lang-button"><a href="../en/home.html">English</a></li>
+        </ul>
+    </div>
+
     <div class = "header">
         <div class = "header-text">
             <div class = "intro">Hola, soy<br><span id = "name">Logan Calder</span>.</div>
             <div class = "bio">Soy un estudiante de ciencias de computación en la Universidad de Santa Clara con 2 años de experiencia en la industria.</div>
             <div class = "buttons">
-                <button id = "colored-button">Contactar</button>
-                <button id = "transparent-button">Descargar CV</button>
+                <button id = "colored-button" onclick="scrollToDiv()">Contactar</button>
+                <a href = "../lc_resume.pdf" target="_blank"><button id = "transparent-button">Descargar CV</button></a>
             </div>
         </div>
         <img src="../images/pfp.JPG" id="img">
     </div>
 
+    <img src="../images/pfp.JPG" id="img_mobile">
+
     <div class = "content">
-        <p>dasiudjhlskdjfh<br>dasiudjhlskdjfh<br>dasiudjhlskdjfh<br>dasiudjhlskdjfh<br>dasiudjhlskdjfh<br>dasiudjhlskdjfh<br>dasiudjhlskdjfh<br>dasiudjhlskdjfh<br>dasiudjhlskdjfh<br>dasiudjhlskdjfh<br>dasiudjhlskdjfh<br>dasiudjhlskdjfh<br>dasiudjhlskdjfh<br>dasiudjhlskdjfh<br></p>
+        <h1>Sobre Mí</h1>
+        <p>I am an aspiring Software Developer with interests in medical technologies, software, and optimization. My strengths lie in quick-learning capabilities and a driven mindset. <br><br>I have worked as a Software Engineering intern at Hewlett Packard Enterprise for two years, working on fullstack developer tools for network connections. My work has been utilized by over 100 developers, quality assurance and sales engineers, and customer service representatives.
+        <br><br>I also enjoy teaching and am an active tutor in the subjects of Spanish, Python, and Algebra through Calculus I.</p>
+        <br>
+        <div id = "skill-buttons">
+            <span class = "about-skill hover-button" onclick="toggleSelection(this)">Skills</span>
+            <span class = "about-skill hover-button" onclick="toggleSelection(this)">Education</span>
+            <span class = "about-skill hover-button" onclick="toggleSelection(this)">Experience</span>
+        </div>
+        <div id = "skills-content">Python, C, C++, C#, Golang, Java, Javascript, HTML & CSS, K8, Docker</div> <!-- This becomes the skills list per category -->
+    </div>
+
+    <div class = "projects">
+        <h2>Featured Projects</h2>
+        <div class = "gallery">
+            <div class = "post">
+                <a href = "projects/valentines2024.html"><img src="../images/projects/valentines2024.jpg" id="post-img"></a>
+                <h3 id = "post-title">Valentines 2024 Questionare</h3>
+                <span id = "post-date">Feburary 10, 2024 <span style = "font-size:x-small;">•</span> HTML, JS</span>
+                <p id = "post-desc">This was my fun little project to ask my girlfriend to be my Valentine this year :)</p>
+            </div>
+            <div class = "post" id = "middle">
+                <a href = "projects/cmtm.html"><img src="../images/projects/cmtm.jpg" id="post-img"></a>
+                <h3 id = "post-title">Christian Ministry Website</h3>
+                <span id = "post-date">Feburary 1, 2024 <span style = "font-size:x-small;">•</span> HTML, JS</span>
+                <p id = "post-desc">This website was made for the Christian Ministry Training Mission as a general informative website and place of contact.</p>
+            </div>
+            <div class = "post">
+                <a href = "projects/hpe.html"><img src="../images/projects/hpe.jpg" id="post-img"></a>
+                <h3 id = "post-title">Hewlett Packard Enterprise</h3>
+                <span id = "post-date">October 1, 2023 <span style = "font-size:x-small;">•</span> Aruba Networks</span>
+                <p id = "post-desc">This last summer, I worked as a Software Engineering intern at HPE developing fullstack developer tools.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class = "connect" id = "connect">
+        <div class = "connect-bio">
+            <h2>Let's Connect!</h2>
+            <p>I am always looking to connect with new people! If you are interested in working with or learning more about me, please do feel free to fill out the form so we can begin talking.</p>
+            <a href = "https://github.com/logancalder" target = "_blank"><i class="fa-brands fa-github fa-2xl"></i></a><a href = "https://www.linkedin.com/in/logancalder/" target = "_blank"><i class="fa-brands fa-linkedin fa-2xl"></i></a>
+        </div>
+        <div class = "connect-form">
+            <form action="https://api.web3forms.com/submit" method="POST">
+                <input type="hidden" name="access_key" value="d8031e4e-c63c-4fbd-a229-c9d3c8ba641e">
+                <label for="name">Name:</label><br>
+                <input type="name" name="name" id = "names" placeholder = "Introduce yourself!" required><br><br>
+            
+                <label for="email">Email:</label><br>
+                <input type="email" name="email" id = "email" placeholder = "address@domain.com" required><br><br>
+            
+                <label for="message">Message:</label><br>
+                <textarea id="message" name="message" id = "message" placeholder="Why do you want to get connected?" required></textarea><br><br>
+                
+                <input type="submit" value="Send">
+
+            </form>
+        </div>
+    </div>
+
+    <div class = "footer">
+        Made with <span style = "color: white;font-weight: bold;">♥</span> by Logan C
     </div>
     
-    <!-- <button></button> -->
 </body>
 </html>

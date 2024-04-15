@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="with=device-width, initial-scale=1.0">
+    <title>LC - About</title>
+    <link rel="stylesheet" href="../style-about.css">
+    <script src="https://kit.fontawesome.com/92c2b5b560.js" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/x-icon" href="../images/lc.png">
+</head>
+
+<script>
+    document.addEventListener('scroll', () => {
+        const header = document.querySelector('.nav-bar');
+        const content = document.querySelector('.content');
+        const projects = document.querySelector('.projects');
+
+        let num = window.scrollY / window.innerHeight;
+        if(num > 0){
+            header.classList.add('scrolled');
+            content.classList.add('scrolled');
+            projects.classList.add('scrolled');
+        }else{
+            header.classList.remove('scrolled');
+            content.classList.remove('scrolled');
+            projects.classList.remove('scrolled');
+        }
+        });
+
+    function toggleNavBar() {
+        var element = document.getElementById("mobile-nav-bar");
+        console.log(element);
+        element.classList.toggle("fade");
+    };
+</script>
+
+<input type="file" id="fileInput" style="display: none;">
+
+<!-- make fireflies for hannah to play with :") -->
+
+<body>
+    <div class="nav-bar">
+        <img class="logo" src="../images/lc.png" alt="logo">
+        <nav class="nav">
+            <ul>
+                <li class="nav-button"><a href="home.html">Home</a></li>
+                <li class="nav-button"><a href="#" id = "selected">About</a></li>
+                <li class="nav-button"><a href="projects.html">Projects</a></li>
+                <li class="nav-button"><a href="tutor.html">Tutor</a></li>
+                <li class="lang-button"><a href="../es/home.html">Español</a></li>
+            </ul>
+        </nav>
+        <div onclick = "toggleNavBar()" class = "nav-menu-container">
+            <i class="fa-solid fa-bars" id = "nav-menu-button"></i>
+        </div>
+    </div>
+
+    <div id = "mobile-nav-bar">
+        <ul>
+            <li class="nav-button"><a href="home.html">Home</a></li>
+            <li class="nav-button"><a href="projects.html">Projects</a></li>
+            <li class="nav-button"><a href="tutor.html">Tutor</a></li>
+            <li class="lang-button"><a href="../es/home.html">Español</a></li>
+        </ul>
+    </div>
+        
+    <div class = "content">
+        <img src="../images/about.JPG" id="about">
+        <div>
+            <h1 class = "title">A bit <span id = "gradient">about me</span>...</h1>
+            <img src="../images/about-mobile.JPG" id="about-mobile">
+            <div id = "bio">
+                <h2>I'm Logan, a Computer Science student at Santa Clara University.</h2>
+                <p>I have been writing code for over <span id = "highlight">6 years</span>. Ever since I began developing my first applications, I fell in love with programming.</p>
+                <p>Growing up, I had a strong passion for creation. From LEGOs to Minecraft, I loved building and creating worlds of my own imagination. There was just <span id = "highlight">something so satisfying and rewarding about being able to construct anything</span> that my imagination desired.</p>
+                <p>Fast forward to now, and I still find myself holding that same passion for creation. Provided this, I've felt that Computer Science is the perfect discipline for me to reflect this creative liberty.</p>
+                <p>My passions lie within <span id = "highlight">medicine and UI design</span>. I would love to be a part of a development team that worked to create new medical technologies, or other interfaces that users may interact with.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class = "footer">
+        Made with <span style = "color: white;font-weight: bold;">♥</span> by Logan C
+    </div>
+    
+</body>
+</html>
