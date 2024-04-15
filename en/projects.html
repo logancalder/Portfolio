@@ -51,6 +51,12 @@
                 }
             }
         };
+
+        function toggleNavBar() {
+            var element = document.getElementById("mobile-nav-bar");
+            console.log(element);
+            element.classList.toggle("fade");
+        };
 </script>
 
 <input type="file" id="fileInput" style="display: none;">
@@ -69,6 +75,18 @@
                 <li class="lang-button"><a href="../es/home.html">Español</a></li>
             </ul>
         </nav>
+        <div onclick = "toggleNavBar()" class = "nav-menu-container">
+            <i class="fa-solid fa-bars" id = "nav-menu-button"></i>
+        </div>
+    </div>
+
+    <div id = "mobile-nav-bar">
+        <ul>
+            <li class="nav-button"><a href="home.html">Home</a></li>
+            <li class="nav-button"><a href="about.html">About</a></li>
+            <li class="nav-button"><a href="tutor.html">Tutor</a></li>
+            <li class="lang-button"><a href="../es/home.html">Español</a></li>
+        </ul>
     </div>
     
     <div class = "projects">
