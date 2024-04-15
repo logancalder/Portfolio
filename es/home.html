@@ -35,12 +35,12 @@
         var spans = document.getElementsByClassName('about-skill');
         var spanContent = element.textContent;
         content.style.opacity = 1;
-        if(spanContent == "Skills"){
+        if(spanContent == "Habilidades"){
             content.textContent = "Python, C, C++, C#, Golang, Java, Javascript, HTML & CSS, K8, Docker";
-        } else if(spanContent == "Experience"){
-            content.textContent = "Software Engineering Intern @ HPE Stanford Treehacks 2023 Nominee \nResearch Assistant @ SCU";
+        } else if(spanContent == "Experiencia"){
+            content.textContent = "Becario - Ingeniero de Software @ HPE Candidato en Stanford Treehacks 2023\nAsistente de Investigación @ SCU";
         } else{
-            content.textContent = "Santa Clara Unviersity, B.S. 2025\nComputer Science & Engineering";
+            content.textContent = "La Universidad de Santa Clara, B.S. 2025\nComputación e Ingeniería";
         }
         
         // Remove 'selected' class from all spans
@@ -108,19 +108,19 @@
 
     <div class = "content">
         <h1>Sobre Mí</h1>
-        <p>I am an aspiring Software Developer with interests in medical technologies, software, and optimization. My strengths lie in quick-learning capabilities and a driven mindset. <br><br>I have worked as a Software Engineering intern at Hewlett Packard Enterprise for two years, working on fullstack developer tools for network connections. My work has been utilized by over 100 developers, quality assurance and sales engineers, and customer service representatives.
-        <br><br>I also enjoy teaching and am an active tutor in the subjects of Spanish, Python, and Algebra through Calculus I.</p>
+        <p>Soy un programador de software con intereses en tecnologías médicas, software, y optimización. Mis fortalezas radican en las capacidades de aprendizaje rápido y una mentalidad impulsada.<br><br>He trabajado como pasante de ingeniería de software en Hewlett Packard Enterprise durante dos años, trabajando en herramientas de desarrollo de fullstack para conexiones de red. Mi trabajo ha sido utilizado por más de 100 desarrolladores, ingenieros de control de calidad y ventas, y representantes de servicio al cliente.
+        <br><br>Tambien disfruto ensenado y soy un mentor en los temas de Espanol, Python, y Alegbra a traves del calculo.</p>
         <br>
         <div id = "skill-buttons">
-            <span class = "about-skill hover-button" onclick="toggleSelection(this)">Skills</span>
-            <span class = "about-skill hover-button" onclick="toggleSelection(this)">Education</span>
-            <span class = "about-skill hover-button" onclick="toggleSelection(this)">Experience</span>
+            <span class = "about-skill hover-button" onclick="toggleSelection(this)">Habilidades</span>
+            <span class = "about-skill hover-button" onclick="toggleSelection(this)">Educación</span>
+            <span class = "about-skill hover-button" onclick="toggleSelection(this)">Experiencia</span>
         </div>
         <div id = "skills-content">Python, C, C++, C#, Golang, Java, Javascript, HTML & CSS, K8, Docker</div> <!-- This becomes the skills list per category -->
     </div>
 
     <div class = "projects">
-        <h2>Featured Projects</h2>
+        <h2>Proyectos Destacados</h2>
         <div class = "gallery">
             <div class = "post">
                 <a href = "projects/valentines2024.html"><img src="../images/projects/valentines2024.jpg" id="post-img"></a>
