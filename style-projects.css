@@ -20,6 +20,18 @@ body{
 
 /* Nav bar */
 
+#nav-menu-button{
+    display:none;
+}
+
+#mobile-nav-bar{
+    display:none;
+}
+
+.nav-menu-container{
+    display:none;
+}
+
 .nav-bar{
     padding-left:10%;
     padding-right:10%;
@@ -224,13 +236,14 @@ body{
     }
 
     #mobile-nav-bar.fade{
+        display:block !important;
         opacity:1 !important;
     }
 
     #mobile-nav-bar{
         opacity:0;
         transition: opacity .2s !important;
-
+        display:none !important;
         z-index:5;
         position: relative;
         background-color: #121212;
@@ -325,7 +338,7 @@ body{
     }
 
     .projects h2{
-        font-size:35px;
+        font-size:55px;
         margin-bottom:25px;
     }
 

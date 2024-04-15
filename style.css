@@ -489,13 +489,14 @@ input[type="submit"]:hover{
     }
 
     #mobile-nav-bar.fade{
+        display:block !important;
         opacity:1 !important;
     }
 
     #mobile-nav-bar{
         opacity:0;
         transition: opacity .2s !important;
-
+        display:none !important;
         z-index:5;
         position: relative;
         background-color: #121212;
