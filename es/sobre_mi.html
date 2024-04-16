@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="with=device-width, initial-scale=1.0">
+    <title>LC - Sobre Mí</title>
+    <link rel="stylesheet" href="../style-about.css">
+    <script src="https://kit.fontawesome.com/92c2b5b560.js" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/x-icon" href="../images/lc.png">
+</head>
+
+<script>
+    document.addEventListener('scroll', () => {
+        const header = document.querySelector('.nav-bar');
+        const content = document.querySelector('.content');
+        const projects = document.querySelector('.projects');
+
+        let num = window.scrollY / window.innerHeight;
+        if(num > 0){
+            header.classList.add('scrolled');
+            content.classList.add('scrolled');
+            projects.classList.add('scrolled');
+        }else{
+            header.classList.remove('scrolled');
+            content.classList.remove('scrolled');
+            projects.classList.remove('scrolled');
+        }
+        });
+
+    function toggleNavBar() {
+        var element = document.getElementById("mobile-nav-bar");
+        console.log(element);
+        element.classList.toggle("fade");
+    };
+</script>
+
+<input type="file" id="fileInput" style="display: none;">
+
+<!-- make fireflies for hannah to play with :") -->
+
+<body>
+    <div class="nav-bar">
+        <img class="logo" src="../images/lc.png" alt="logo">
+        <nav class="nav">
+            <ul>
+                <li class="nav-button"><a href="hogar.html">Hogar</a></li>
+                <li class="nav-button"><a href="#" id = "selected">Sobre Mí</a></li>
+                <li class="nav-button"><a href="proyectos.html">Proyectos</a></li>
+                <li class="nav-button"><a href="tutoria.html">Tutoría</a></li>
+                <li class="lang-button"><a href="../en/about.html">English</a></li>
+            </ul>
+        </nav>
+        <div onclick = "toggleNavBar()" class = "nav-menu-container">
+            <i class="fa-solid fa-bars" id = "nav-menu-button"></i>
+        </div>
+    </div>
+        
+    <div id = "mobile-nav-bar">
+        <ul>
+            <li class="nav-button"><a href="hogar.html">Hogar</a></li>
+            <li class="nav-button"><a href="#" id = "selected">Sobre Mí</a></li>
+            <li class="nav-button"><a href="proyectos.html">Proyectos</a></li>
+            <li class="nav-button"><a href="tutoria.html">Tutoría</a></li>
+            <li class="lang-button"><a href="../en/about.html">English</a></li>
+        </ul>
+    </div>
+        
+    <div class = "content">
+        <img src="../images/about.JPG" id="about">
+        <div>
+            <h1 class = "title">Un poco <span id = "gradient">sobre mí</span>...</h1>
+            <img src="../images/about-mobile.JPG" id="about-mobile">
+            <div id = "bio">
+                <h2>Soy Logan, un estudiante de ciencias de computación en la Universidad de Santa Clara.</h2>
+                <p>He estado escribiendo código hace <span id = "highlight">6 años</span>. Desde que empiece a desarrollar, me enamoré de la programación.</p>
+                <p>Al crecer, tuve una gran pasión por la creación. Desde LEGO hasta Minecraft, me encantaba construir y crear mundos de mi propia imaginación. Era <span id = "highlight">algo tan satisfactorio y gratificante de poder construir cualquier cosa</span> que mi imaginación deseaba.</p>
+                <p>Avance rápido hasta ahora, y todavía me encuentro sosteniendo esa misma pasión por la creación. Teniendo esto en cuenta, he sentido que la informática es la disciplina perfecta para reflejar esta libertad creativa.</p>
+                <p>Mis pasiones son <span id = "highlight">medicina and diseño de UI</span>. Me encantaría formar parte de un equipo de desarrollo que trabajara para crear nuevas tecnologías médicas u otras interfaces con las que los usuarios puedan interactuar.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class = "footer">
+        Hecho con <span style = "color: white;font-weight: bold;">♥</span> de Logan C
+    </div>
+    
+</body>
+</html>

@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta name="viewport" content="with=device-width, initial-scale=1.0">
-    <title>LC - Projects</title>
+    <title>LC - Proyectos</title>
     <link rel="stylesheet" href="../style-projects.css">
     <script src="https://kit.fontawesome.com/92c2b5b560.js" crossorigin="anonymous"></script>
     <meta charset="UTF-8">
@@ -64,81 +64,82 @@
 <!-- make fireflies for hannah to play with :") -->
 
 <body>
-    <div class ="nav-bar">
+    <div class="nav-bar">
         <img class="logo" src="../images/lc.png" alt="logo">
         <nav class="nav">
             <ul>
-                <li class="nav-button"><a href="home.html">Home</a></li>
-                <li class="nav-button"><a href="about.html">About</a></li>
-                <li class="nav-button"><a href="#" id = "selected">Projects</a></li>
-                <li class="nav-button"><a href="tutor.html">Tutor</a></li>
-                <li class="lang-button"><a href="../es/home.html">Español</a></li>
+                <li class="nav-button"><a href="hogar.html">Hogar</a></li>
+                <li class="nav-button"><a href="sobre_mi.html">Sobre Mí</a></li>
+                <li class="nav-button"><a href="#" id = "selected">Proyectos</a></li>
+                <li class="nav-button"><a href="tutoria.html">Tutoría</a></li>
+                <li class="lang-button"><a href="../en/projects.html">English</a></li>
             </ul>
         </nav>
         <div onclick = "toggleNavBar()" class = "nav-menu-container">
             <i class="fa-solid fa-bars" id = "nav-menu-button"></i>
         </div>
     </div>
-
+        
     <div id = "mobile-nav-bar">
         <ul>
-            <li class="nav-button"><a href="home.html">Home</a></li>
-            <li class="nav-button"><a href="about.html">About</a></li>
-            <li class="nav-button"><a href="tutor.html">Tutor</a></li>
-            <li class="lang-button"><a href="../es/home.html">Español</a></li>
+            <li class="nav-button"><a href="hogar.html">Hogar</a></li>
+            <li class="nav-button"><a href="sobre_mi.html">Sobre Mí</a></li>
+            <li class="nav-button"><a href="#" id = "selected">Proyectos</a></li>
+            <li class="nav-button"><a href="tutoria.html">Tutoría</a></li>
+            <li class="lang-button"><a href="../en/projects.html">English</a></li>
         </ul>
     </div>
     
     <div class = "projects">
-        <h2>My Projects & Experience</h2>
+        <h2>Mis Proyectos e Experiencia</h2>
         <div class = "buttons">
-            <button id = "colored-button" onclick = "select('all')">All</button>
+            <button id = "colored-button" onclick = "select('all')">Todos</button>
             <button id = "transparent-button" onclick = "select('personal')">Personal</button>
-            <button id = "transparent-button" onclick = "select('work')">Work & School</button>
+            <button id = "transparent-button" onclick = "select('work')">Trabajo e Escuela</button>
         </div>
         
         <div class = "container">
             <div class = "project personal">
                 <a href = "projects/valentines2024.html"><img src="../images/projects/valentines2024.jpg" id="post-img"></a>
-                <h3 id = "post-title">Valentines 2024 Questionare</h3>
-                <span id = "post-date">Feburary 10, 2024 <span style = "font-size:x-small;">•</span> HTML, JS</span>
+                <h3 id = "post-title">Cuestionario de San Valentín</h3>
+                <span id = "post-date">10 de febrero de 2024 <span style = "font-size:x-small;">•</span> HTML, JS</span>
             </div>
 
             <div class = "project work">
                 <a href = "projects/cmtm.html"><img src="../images/projects/cmtm.jpg" id="post-img"></a>
                 <h3 id = "post-title">Christian Ministry Website</h3>
-                <span id = "post-date">Feburary 1, 2024 <span style = "font-size:x-small;">•</span> HTML, JS</span>
+                <span id = "post-date">1 de febrero de 2024 <span style = "font-size:x-small;">•</span> HTML, JS</span>
             </div>
 
             <div class = "project work">
                 <a href = "projects/hpe.html"><img src="../images/projects/hpe.jpg" id="post-img"></a>
                 <h3 id = "post-title">Hewlett Packard Enterprise</h3>
-                <span id = "post-date">October 1, 2023 <span style = "font-size:x-small;">•</span> Py, Go, HTML, JS</span>
+                <span id = "post-date">1 de octubre de 2023 <span style = "font-size:x-small;">•</span> Aruba Networks</span>
             </div>
 
             <div class = "project work">
                 <a href = "projects/research.html"><img src="../images/projects/research.jpg" id="post-img"></a>
-                <h3 id = "post-title">Performance Tuning Research</h3>
-                <span id = "post-date">September 19, 2023 <span style = "font-size:x-small;">•</span> HTML, JS</span>
+                <h3 id = "post-title">Investigación en SCU</h3>
+                <span id = "post-date">19 de septiembre de 2023 <span style = "font-size:x-small;">•</span> HTML, JS</span>
             </div>
 
             <div class = "project personal">
                 <a href = "projects/treehacks.html"><img src="../images/projects/treehacks.jpg" id="post-img"></a>
-                <h3 id = "post-title">Treehacks 2023</h3>
-                <span id = "post-date">Feburary 19, 2023 <span style = "font-size:x-small;">•</span> HTML, JS</span>
+                <h3 id = "post-title">Treehacks de 2023</h3>
+                <span id = "post-date">19 de febrero de 2023 <span style = "font-size:x-small;">•</span> HTML, JS</span>
             </div>
 
             <div class = "project personal">
                 <a href = "projects/old_website.html"><img src="../images/projects/oldweb.jpg" id="post-img"></a>
-                <h3 id = "post-title">Old Website</h3>
-                <span id = "post-date">September 1, 2021 <span style = "font-size:x-small;">•</span> HTML, JS</span>
+                <h3 id = "post-title">Sitio Web Viejo</h3>
+                <span id = "post-date">1 de septiembre de 2021 <span style = "font-size:x-small;">•</span> HTML, JS</span>
             </div>
         </div>
     </div>
 
     
     <div class = "footer">
-        Made with <span style = "color: white;font-weight: bold;">♥</span> by Logan C
+        Hecho con <span style = "color: white;font-weight: bold;">♥</span> de Logan C
     </div>
 </body>
 </html>

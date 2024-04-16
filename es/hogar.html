@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta name="viewport" content="with=device-width, initial-scale=1.0">
-    <title>Logan Calder</title>
+    <title>LC - Hogar</title>
     <link rel="stylesheet" href="../style.css">
     <script src="https://kit.fontawesome.com/92c2b5b560.js" crossorigin="anonymous"></script>
     <meta charset="UTF-8">
@@ -72,9 +72,9 @@
         <nav class="nav">
             <ul>
                 <li class="nav-button"><a href="#" id = "selected">Hogar</a></li>
-                <li class="nav-button"><a href="about.html">Sobre Mí</a></li>
-                <li class="nav-button"><a href="projects.html">Proyectos</a></li>
-                <li class="nav-button"><a href="tutor.html">Mentor</a></li>
+                <li class="nav-button"><a href="sobre_mi.html">Sobre Mí</a></li>
+                <li class="nav-button"><a href="proyectos.html">Proyectos</a></li>
+                <li class="nav-button"><a href="tutoria.html">Tutoría</a></li>
                 <li class="lang-button"><a href="../en/home.html">English</a></li>
             </ul>
         </nav>
@@ -85,9 +85,10 @@
         
     <div id = "mobile-nav-bar">
         <ul>
-            <li class="nav-button"><a href="#">Hogar</a></li>
-            <li class="nav-button"><a href="#">Sobre Mí</a></li>
-            <li class="nav-button"><a href="#">Proyectos</a></li>
+            <li class="nav-button"><a href="#" id = "selected">Hogar</a></li>
+            <li class="nav-button"><a href="sobre_mi.html">Sobre Mí</a></li>
+            <li class="nav-button"><a href="proyectos.html">Proyectos</a></li>
+            <li class="nav-button"><a href="tutoria.html">Tutoría</a></li>
             <li class="lang-button"><a href="../en/home.html">English</a></li>
         </ul>
     </div>
@@ -124,51 +125,51 @@
         <div class = "gallery">
             <div class = "post">
                 <a href = "projects/valentines2024.html"><img src="../images/projects/valentines2024.jpg" id="post-img"></a>
-                <h3 id = "post-title">Valentines 2024 Questionare</h3>
-                <span id = "post-date">Feburary 10, 2024 <span style = "font-size:x-small;">•</span> HTML, JS</span>
-                <p id = "post-desc">This was my fun little project to ask my girlfriend to be my Valentine this year :)</p>
+                <h3 id = "post-title">Cuestionario de San Valentín</h3>
+                <span id = "post-date">10 de febrero de 2024 <span style = "font-size:x-small;">•</span> HTML, JS</span>
+                <p id = "post-desc">Este fue mi proyecto divertido para preguntar a mi novia si quiso ser mi enamorada este año :)</p>
             </div>
             <div class = "post" id = "middle">
                 <a href = "projects/cmtm.html"><img src="../images/projects/cmtm.jpg" id="post-img"></a>
                 <h3 id = "post-title">Christian Ministry Website</h3>
-                <span id = "post-date">Feburary 1, 2024 <span style = "font-size:x-small;">•</span> HTML, JS</span>
-                <p id = "post-desc">This website was made for the Christian Ministry Training Mission as a general informative website and place of contact.</p>
+                <span id = "post-date">1 de febrero de 2024 <span style = "font-size:x-small;">•</span> HTML, JS</span>
+                <p id = "post-desc">Este sitio web fue hecho por el Christian Ministry Training Mission como un sitio web informativo y lugar de contacto.</p>
             </div>
             <div class = "post">
                 <a href = "projects/hpe.html"><img src="../images/projects/hpe.jpg" id="post-img"></a>
                 <h3 id = "post-title">Hewlett Packard Enterprise</h3>
-                <span id = "post-date">October 1, 2023 <span style = "font-size:x-small;">•</span> Aruba Networks</span>
-                <p id = "post-desc">This last summer, I worked as a Software Engineering intern at HPE developing fullstack developer tools.</p>
+                <span id = "post-date">1 de octubre de 2023 <span style = "font-size:x-small;">•</span> Aruba Networks</span>
+                <p id = "post-desc">Durante el verano pasado, trabajé como un becario de ingeniería de software en HPE desarrollando herramientas desarrolladores fullstack.</p>
             </div>
         </div>
     </div>
 
     <div class = "connect" id = "connect">
         <div class = "connect-bio">
-            <h2>Let's Connect!</h2>
-            <p>I am always looking to connect with new people! If you are interested in working with or learning more about me, please do feel free to fill out the form so we can begin talking.</p>
+            <h2>Vamos a Conectar!</h2>
+            <p>¡Siempre estoy buscando a conectar con gente nueva! Si estás interesado en trabajar conmigo o aprendiendo más sobre yo, por favor rellene el formulario para que podamos empezar a hablar.</p>
             <a href = "https://github.com/logancalder" target = "_blank"><i class="fa-brands fa-github fa-2xl"></i></a><a href = "https://www.linkedin.com/in/logancalder/" target = "_blank"><i class="fa-brands fa-linkedin fa-2xl"></i></a>
         </div>
         <div class = "connect-form">
             <form action="https://api.web3forms.com/submit" method="POST">
                 <input type="hidden" name="access_key" value="d8031e4e-c63c-4fbd-a229-c9d3c8ba641e">
-                <label for="name">Name:</label><br>
-                <input type="name" name="name" id = "names" placeholder = "Introduce yourself!" required><br><br>
+                <label for="name">Nombre:</label><br>
+                <input type="name" name="name" id = "names" placeholder = "Preséntate" required><br><br>
             
                 <label for="email">Email:</label><br>
-                <input type="email" name="email" id = "email" placeholder = "address@domain.com" required><br><br>
+                <input type="email" name="email" id = "email" placeholder = "nombre@domain.com" required><br><br>
             
-                <label for="message">Message:</label><br>
-                <textarea id="message" name="message" id = "message" placeholder="Why do you want to get connected?" required></textarea><br><br>
+                <label for="message">Mensaje:</label><br>
+                <textarea id="message" name="message" id = "message" placeholder="¿Por qué quieres conectar?" required></textarea><br><br>
                 
-                <input type="submit" value="Send">
+                <input type="submit" value="Enviar">
 
             </form>
         </div>
     </div>
 
     <div class = "footer">
-        Made with <span style = "color: white;font-weight: bold;">♥</span> by Logan C
+        Hecho con <span style = "color: white;font-weight: bold;">♥</span> de Logan C
     </div>
     
 </body>

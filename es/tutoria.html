@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="with=device-width, initial-scale=1.0">
+    <title>LC - Tutoría</title>
+    <link rel="stylesheet" href="../style-tutor.css">
+    <script src="https://kit.fontawesome.com/92c2b5b560.js" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/x-icon" href="../images/lc.png">
+</head>
+
+<!-- Other scripts -->
+
+<script>
+    document.addEventListener('scroll', () => {
+        const header = document.querySelector('.nav-bar');
+        const content = document.querySelector('.content');
+        const projects = document.querySelector('.projects');
+
+        let num = window.scrollY / window.innerHeight;
+        if(num > 0){
+            header.classList.add('scrolled');
+            content.classList.add('scrolled');
+            projects.classList.add('scrolled');
+        }else{
+            header.classList.remove('scrolled');
+            content.classList.remove('scrolled');
+            projects.classList.remove('scrolled');
+        }
+        });
+
+    function scrollToDiv() {
+        var div = document.getElementById('connect');
+        div.scrollIntoView({ behavior: 'smooth', block: "center"});
+    };
+
+    function toggleNavBar() {
+        var element = document.getElementById("mobile-nav-bar");
+        console.log(element);
+        element.classList.toggle("fade");
+    };
+</script>
+
+<input type="file" id="fileInput" style="display: none;">
+
+<!-- make fireflies for hannah to play with :") -->
+
+<body>
+    <div class="nav-bar">
+        <img class="logo" src="../images/lc.png" alt="logo">
+        <nav class="nav">
+            <ul>
+                <li class="nav-button"><a href="hogar.html">Hogar</a></li>
+                <li class="nav-button"><a href="sobre_mi.html">Sobre Mí</a></li>
+                <li class="nav-button"><a href="proyectos.html">Proyectos</a></li>
+                <li class="nav-button"><a href="#" id = "selected">Tutoría</a></li>
+                <li class="lang-button"><a href="../en/tutor.html">English</a></li>
+            </ul>
+        </nav>
+        <div onclick = "toggleNavBar()" class = "nav-menu-container">
+            <i class="fa-solid fa-bars" id = "nav-menu-button"></i>
+        </div>
+    </div>
+        
+    <div id = "mobile-nav-bar">
+        <ul>
+            <li class="nav-button"><a href="hogar.html">Hogar</a></li>
+            <li class="nav-button"><a href="sobre_mi.html">Sobre Mí</a></li>
+            <li class="nav-button"><a href="proyectos.html">Proyectos</a></li>
+            <li class="nav-button"><a href="#" id = "selected">Tutoría</a></li>
+            <li class="lang-button"><a href="../en/tutor.html">English</a></li>
+        </ul>
+    </div>
+        
+        <div class = "content">
+            <div>
+                <h1 class = "title">¿Te interesa en<span id = "gradient">clases particulares</span>?</h1>
+                <div id = "desc">
+                    <h2>Me encantaría ayudarte a sobresalir en tus cursos.</h2>
+                    <p>He estado enseñando hace <span id = "highlight">5 años</span>, con experiencia en la enseñanza de asignaturas como: <span id = "gradient"><b>Python</b></span>, <span id = "gradient"><b>Pre-Álgebra</b></span>, <span id = "gradient"><b>Álgebra I-II</b></span>, <span id = "gradient"><b>Cálculo I</b></span>, e <span id = "gradient"><b>Español</b></span>.</p>
+                    <p>Como tutor, mi objetivo principal es asegurarme de que el estudiante tenga una <span id = "highlight">sólida comprensión del tema </span>, preparados lo suficiente como para <span id = "highlight">tomar los exámenes con confianza</span>. Siempre haré mi mejor esfuerzo para <span id = "highlight">acomodar mi enseñanza</span> al estilo de aprendizaje preferido del estudiante, y explicaré las lecciones en cualquier método que les ayude a aprender mejor.</p>
+                    <p>Mis estudiantes tienen un registro de obtener constantemente <span id = "highlight">A</span> y <span id = "highlight">B's altos</span> en sus exámenes después de venir a mí y recibir instrucción, mientras que antes recibió calificaciones bajas o fallidas. Si bien no puedo garantizar un aumento de la calificación (que está en el estudiante para practicar y mejorar realmente), puedo asegurar que siempre haré mi mejor esfuerzo para ayudar al estudiante a aprender, incluso <span id = "highlight">respondiendo a preguntas fuera de las sesiones de tutoría designadas.</span></p>
+                    <button id = "colored-button" onclick="scrollToDiv()">Reservar una Lección</button>
+                </div>
+            </div>
+        </div>
+
+        <div id = "mobile-nav-bar">
+            <ul>
+                <li class="nav-button"><a href="#" id = "selected">Home</a></li>
+                <li class="nav-button"><a href="about.html">About</a></li>
+                <li class="nav-button"><a href="projects.html">Projects</a></li>
+                <li class="nav-button"><a href="tutor.html">Tutor</a></li>
+                <li class="lang-button"><a href="../es/home.html">Español</a></li>
+            </ul>
+        </div>
+
+        <div class = "connect" id = "connect">
+            <div class = "connect-bio">
+                <h2>Vamos a Conectar!</h2>
+                <p>¡Siempre estoy buscando a conectar con gente nueva! Si estás interesado en trabajar conmigo o aprendiendo más sobre yo, por favor rellene el formulario para que podamos empezar a hablar.</p>
+                <a href = "https://github.com/logancalder" target = "_blank"><i class="fa-brands fa-github fa-2xl"></i></a><a href = "https://www.linkedin.com/in/logancalder/" target = "_blank"><i class="fa-brands fa-linkedin fa-2xl"></i></a>
+            </div>
+            <div class = "connect-form">
+                <form action="https://api.web3forms.com/submit" method="POST">
+                    <input type="hidden" name="access_key" value="d8031e4e-c63c-4fbd-a229-c9d3c8ba641e">
+                    <label for="name">Nombre:</label><br>
+                    <input type="name" name="name" id = "names" placeholder = "Preséntate" required><br><br>
+                
+                    <label for="email">Email:</label><br>
+                    <input type="email" name="email" id = "email" placeholder = "nombre@domain.com" required><br><br>
+                
+                    <label for="message">Mensaje:</label><br>
+                    <textarea id="message" name="message" id = "message" placeholder="¿Por qué quieres conectar?" required></textarea><br><br>
+                    
+                    <input type="submit" value="Enviar">
+    
+                </form>
+            </div>
+        </div>
+
+    <div class = "footer">
+        Hecho con <span style = "color: white;font-weight: bold;">♥</span> de Logan C
+    </div>
+    
+</body>
+</html>
