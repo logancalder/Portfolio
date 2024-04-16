@@ -271,6 +271,9 @@ body{
     -webkit-text-fill-color: transparent !important;
   }
 
+  .text{
+    display:none;
+  }
 
   .c{
     color:rgb(202, 188, 241);
