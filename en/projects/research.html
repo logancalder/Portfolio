@@ -64,13 +64,13 @@
 
 <body>
     <div class="nav-bar">
-        <a href="../home.html"><img class="logo" src="../../images/lc.png" alt="logo"></a>
+        <a href="../hogar.html"><img class="logo" src="../../images/lc.png" alt="logo"></a>
         <nav class="nav">
             <ul>
-                <li class="nav-button"><a href="../home.html">Home</a></li>
-                <li class="nav-button"><a href="../about.html">About</a></li>
-                <li class="nav-button"><a href="../projects.html">Projects</a></li>
-                <li class="nav-button"><a href="../tutor.html">Tutor</a></li>
+                <li class="nav-button"><a href="../../en/home.html">Home</a></li>
+                <li class="nav-button"><a href="../../en/about.html">About</a></li>
+                <li class="nav-button"><a href="../../en/projects.html">Projects</a></li>
+                <li class="nav-button"><a href="../../en/tutor.html">Tutor</a></li>
             </ul>
         </nav>
         <div onclick = "toggleNavBar()" class = "nav-menu-container">
@@ -80,10 +80,10 @@
 
     <div id = "mobile-nav-bar">
         <ul>
-            <li class="nav-button"><a href="../home.html">Home</a></li>
-            <li class="nav-button"><a href="../about.html">About</a></li>
-            <li class="nav-button"><a href="../projects.html">Projects</a></li>
-            <li class="nav-button"><a href="../tutor.html">Tutor</a></li>
+            <li class="nav-button"><a href="../../en/home.html">Home</a></li>
+            <li class="nav-button"><a href="../../en/about.html">About</a></li>
+            <li class="nav-button"><a href="../../en/projects.html">Projects</a></li>
+            <li class="nav-button"><a href="../../en/tutor.html">Tutor</a></li>
         </ul>
     </div>
     
@@ -93,13 +93,17 @@
     </div>
 
     <div class = "content">
-        <h2 class = "research">Beginning in 2023, I joined a research study on randomized linear algebra algorithims.</h2>
-        <p>I have been fortunate enough to join a professor at Santa Clara University in a field of research concerning <span class = "r">randomized linear algorithim runtime</span> on various hardware setups. While the research has just begun recently, I hope to be able to share more in the future about what we find, and the process along the way.</p>
-        <p>So far, I have been observing <span class = "r">variations in simulation runtimes</span> for <span class = "r">CPU clusters</span> concerning matrix multiplications, provided varying amounts of <span class = "r">RAM</span> and <span class = "r">CPUs</span>. In the future, we intend to utilize a library, <span class = "r">RandBLAS</span>, to simulate randomized linear algebra methods. We have been collecting data using an external library named <span class = "r">PAPI</span>, which permits us to analyze data of varying areas that a computer may output during a trial, such as <span class = "r">CPU cycles</span> or <span class = "r">instruction count</span>.</p>
-        <p><i>I will continue to update this page as I make further progress in my research!</i></p>
+        <h2 class = "research">Beginning in 2023, I joined a research study regarding the performance analysis and tuning of algorithims.</h2>
+        <p>I have been fortunate enough to join a professor at Santa Clara University in a field of research concerning <span class = "r">randomized Dense and Sparse Sketching</span>, a branch of Linear Algebra. This is an approach to reducing matrices and vectors, theoretically resulting in the faster computation of matrix multiplication. For my research specifically, I focused on <span class = "r">RandBLAS'</span> Dense and Sparse sketching (BLAS stands for Basic Linear Algebra Subprograms), and the subroutines they contained.</p>
+        <p>My approach to analyzing these subroutines was to utilize a performance counter software called <span class = "r">PAPI</span> (Pathway Activity Profiling). This tool, when put to use, is capable of returning system information recorded during the time of the sketches. This contains, but is not limited to, <span class = "r">Cycles</span>, <span class = "r">Instructions</span>, and <span class = "r">Runtime</span>. Notably of these three, Instructions would provide me essential information as to if the subroutine being measured was <span class = "r">parallelized</span>, a topic I will address later.</p>
+        <p>I began by first installing a plethora of libraries, all used to run either RandBLAS or its dependencies. I also had to create adaptable functions for PAPI that could be easily integrated into various files that I wished to measure inside of. This took quite some time (for some reasons out of my control at times), but once set up, I was able to begin my analysis. This process consisted of connecting to SCU's <span class = "r">WaveHPC</span>, a multi-core cluster of high-performance computing servers. On this platform I would run my simulations on a <span class = "r">CPU Node</span>, which is an adaptable node in which I can allocate the number of threads and cores I wish to utilize.</p>
+        <p>An automated Shell script would then alter the number of threads (a common parameter I changed), as well as matrix sizes. These simulations would then be ran and stored into a <span class = "r">.csv</span> file. I chose this format opposed to a database such as MySQL as I would later use .csv as an input for a Machine Learning interpretation software, which would visualize my data.</p>
+        <p>For the analysis of the data, I chose to use <span class = "r">Dashing</span>, which had the capability of reading and interpreting what was the most influential events (this is the name given to data obtained from the simulation) that would affect runtime. It would then display these results into easy-to-analyze formats, such as <span class = "r">heatmaps</span> or <span class = "r">bar charts</span>.</p>
+        <p>Data obtained from these simulations was generally inconclusive. However, some events did tend to have a recurring effect on runtime and overall performance, and thus will be kept in mind for future optimization efforts. If you are interested in learning more about those events specifically, or other details of my work, you may view my formal report for the last Quarter during which I worked on this research.</p>
+        <p><i>At the time of writing, I still have one more Quarter remaining, thus making my work incomplete.</i></p>
         <br>
         <p style = "color:white; font-weight: bold;">If you'd like to view my research yourself, I have uploaded my scripts to a GitHub repository linked <a id = "r" href = "https://github.com/logancalder/COEN193" target = "_blank">here</a>.</p>
-    
+        <p style = "color:white; font-weight: bold;">To view my Spring Quarter 2024 Report, click <a id = "r" href = "../../Logan_Calder_Spring2024_Undergraduate_Research_Report.pdf" target = "_blank">here</a>.</p>
     </div>
 
     <div class = "footer">
